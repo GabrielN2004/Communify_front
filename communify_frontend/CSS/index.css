@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+:root{
+    --clr: #17009f;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+    background: var(--clr);
+}
+.navegation{
+    width: 100%;
+    height: 80px;
+    background: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.navegation ul{
+    display: flex;
+    width: 500px;
+}
+.navegation ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+.navegation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+.navegation ul li a .icon{
+    position: relative;
+    display:block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--clr);
+}
+.navegation ul li:hover a .icon{
+    transform: translateY(-35px);
+}
+.navegation ul li a .text{
+    position: absolute;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.navegation ul li:hover a .text{
+    opacity: 1;
+    transform: translateY(10px);
+}
